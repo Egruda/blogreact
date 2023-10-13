@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
 
+
+
 function Author({setToken}) {
     const [blog, setBlog] = useState('');
     const [error, setError] = useState(null);
@@ -17,7 +19,7 @@ function Author({setToken}) {
     useEffect(() => {
         const getData = async () => {
             try {
-            const response = await fetch('http://localhost:8000/posts')
+            const response = await fetch(`${process.env.REACT_APP_API}/posts`)
             
             if (!response.ok) {
                 throw new Error(
@@ -42,7 +44,7 @@ function Author({setToken}) {
     async function logout() {
         try {
             console.log('logout')
-            await fetch('http://localhost:8000/posts/logout');
+            await fetch(`${process.env.REACT_APP_API}/posts/logout`);
             setToken(false);
             navigate('/');
         } catch(error) {
