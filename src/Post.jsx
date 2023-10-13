@@ -23,7 +23,7 @@ function Post() {
     const inputComment = useRef(null);
 
     useEffect(()=> {
-        fetch(`http://localhost:8000/posts/${id}`)
+        fetch(`https://broken-smoke-228.fly.dev/posts/${id}`)
             .then(data => data.json())
             .then(data => {
                 setPost(data); 
@@ -34,7 +34,7 @@ function Post() {
                 setPost(null);
             })
             .finally(()=> setLoadingPost(false));
-        fetch(`http://localhost:8000/posts/${id}/comments`)
+        fetch(`https://broken-smoke-228.fly.dev/posts/${id}/comments`)
             .then(data => data.json())
             .then(data => {
                 setComments(data); 
