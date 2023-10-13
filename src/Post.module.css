@@ -1,0 +1,27 @@
+.post {
+    background-color: lightgrey;
+    padding: 30px;
+    margin-bottom: 30px;
+
+}
+
+.comments {
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 30px;
+    padding: 30px 15px;
+}
+
+.comment {
+    background-color: whitesmoke;
+    width: 85%;
+    padding: 30px;
+}
+
+.titleComments {
+    margin: 0;
+    padding: 0;
+}
