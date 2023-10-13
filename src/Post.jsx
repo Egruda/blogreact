@@ -67,7 +67,7 @@ function Post() {
         e.preventDefault();
 
         try {
-            const response = await fetch(`http://localhost:8000/posts/${id}/comments`, {
+            const response = await fetch(`https://broken-smoke-228.fly.dev/posts/${id}/comments`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -77,7 +77,6 @@ function Post() {
 
             if (response.ok) {
                 const data = await response.json();
-                console.log('API response:', data);
                 setFormData({name: '', comment: ''})
                 setSubmit(submit+1);
                 setAddComment(false);

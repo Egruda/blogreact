@@ -15,7 +15,7 @@ function Login({setToken}) {
         e.preventDefault();
 
         try {
-            const response = await fetch(`http://localhost:8000/posts/login`, {
+            const response = await fetch(`https://broken-smoke-228.fly.dev/posts/login`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -27,7 +27,6 @@ function Login({setToken}) {
 
             if (response.ok) {
                 const data = await response.json();
-                console.log('API response:', data);
                 setToken(true);
                 navigate('/author');
 

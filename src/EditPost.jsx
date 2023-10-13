@@ -18,7 +18,7 @@ function EditPost() {
     useEffect(()=> {
         const getData = async() => {
             try {
-            const response = await fetch(`http://localhost:8000/posts/${id}`);
+            const response = await fetch(`https://broken-smoke-228.fly.dev/${id}`);
             if (!response.ok) {
                 throw new Error(
                     'This is an HTTP error: The status is ${response.status}'
@@ -41,7 +41,6 @@ function EditPost() {
     function handleInputChange(e) {
         const name = e.target.name;
         const value = e.target.value;
-        console.log(value);
         setFormData({...formData, [name] : value })
     }
     
@@ -51,7 +50,7 @@ function EditPost() {
         e.preventDefault();
 
         try {
-        const response = await fetch(`http://localhost:8000/posts/${id}`, {
+        const response = await fetch(`https://broken-smoke-228.fly.dev/${id}`, {
             method: "PUT",
             mode: "cors",
             headers: {

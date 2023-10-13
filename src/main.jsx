@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import Blog from './Blog.jsx'
 import './index.css'
 import Router from './router.jsx'

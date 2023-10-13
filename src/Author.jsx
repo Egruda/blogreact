@@ -19,7 +19,7 @@ function Author({setToken}) {
     useEffect(() => {
         const getData = async () => {
             try {
-            const response = await fetch(`${process.env.REACT_APP_API}/posts`)
+            const response = await fetch('https://broken-smoke-228.fly.dev/posts')
             
             if (!response.ok) {
                 throw new Error(
@@ -29,7 +29,6 @@ function Author({setToken}) {
             let data = await response.json();
             
             setBlog(data);
-            console.log(data);
             setError(null);
         } catch(err) {
             setError(err.message);
@@ -43,8 +42,7 @@ function Author({setToken}) {
 
     async function logout() {
         try {
-            console.log('logout')
-            await fetch(`${process.env.REACT_APP_API}/posts/logout`);
+            await fetch('https://broken-smoke-228.fly.dev/posts/logout');
             setToken(false);
             navigate('/');
         } catch(error) {

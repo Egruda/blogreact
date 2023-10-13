@@ -14,7 +14,7 @@ function DeletePost() {
     useEffect(()=> {
         const getData = async () => {
             try {
-                const response = await fetch(`http://localhost:8000/posts/${id}`);
+                const response = await fetch(`https://broken-smoke-228.fly.dev/${id}`);
                 
                 if (!response.ok) {
                     throw new Error(
@@ -38,7 +38,7 @@ function DeletePost() {
         e.preventDefault();
 
         try {
-            const response = await fetch(`http://localhost:8000/posts/${id}`, {
+            const response = await fetch(`https://broken-smoke-228.fly.dev/posts/${id}`, {
                 method: "DELETE",
                 headers: {
                     'Content-Type': 'application/json',
@@ -47,7 +47,6 @@ function DeletePost() {
             })
             if(response.ok) {
             setLoading(true);
-            console.log('success')
             navigate('/author');
             } else {
                 console.error('API call failed')

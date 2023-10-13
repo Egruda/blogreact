@@ -27,7 +27,7 @@ function Blog() {
         
         const getData = async () => {
             try {
-            const response = await fetch(`https://broken-smoke-228.fly.dev/posts`
+            const response = await fetch('https://broken-smoke-228.fly.dev/posts'
             , {
                 method: 'GET',
                 credentials: 'include', // Include cookies in the request
@@ -39,7 +39,6 @@ function Blog() {
             //     },
             //   })
               
-            console.log('first')
             if (!response.ok) {
                 throw new Error(
                     'This is an HTTP error: The status is ${response.status}'
@@ -48,7 +47,6 @@ function Blog() {
             let data = await response.json();
             
             setBlog(data);
-            console.log(data);
             setError(null);
         } catch(err) {
             setError(err.message);
