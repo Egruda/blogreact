@@ -1,0 +1,12 @@
+[[redirects]]
+from = "/api/*"
+to = "https://broken-smoke-228.fly.dev/:splat"
+status = 200
+force = true
+headers = {Origin = "https://deft-chebakia-120a5a.netlify.app/"}
+
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 20
