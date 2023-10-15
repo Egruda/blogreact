@@ -19,7 +19,7 @@ function Author({setToken}) {
     useEffect(() => {
         const getData = async () => {
             try {
-            const response = await fetch('https://broken-smoke-228.fly.dev/posts')
+            const response = await fetch('https://still-flower-8414.fly.dev/posts')
             
             if (!response.ok) {
                 throw new Error(
@@ -42,7 +42,7 @@ function Author({setToken}) {
 
     async function logout() {
         try {
-            await fetch('https://broken-smoke-228.fly.dev/posts/logout');
+            await fetch('https://still-flower-8414.fly.dev/posts/logout');
             setToken(false);
             navigate('/');
         } catch(error) {

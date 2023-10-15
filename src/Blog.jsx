@@ -27,7 +27,7 @@ function Blog() {
         
         const getData = async () => {
             try {
-            const response = await fetch('https://broken-smoke-228.fly.dev/posts'
+            const response = await fetch('https://still-flower-8414.fly.dev/posts'
             , {
                 method: 'GET',
                 credentials: 'include', // Include cookies in the request

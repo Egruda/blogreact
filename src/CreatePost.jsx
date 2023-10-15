@@ -24,7 +24,7 @@ function CreatePost() {
         e.preventDefault();
 
         try {
-        const response = await fetch('http://localhost:8000/posts/', {
+        const response = await fetch('https://still-flower-8414.fly.dev/posts', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',

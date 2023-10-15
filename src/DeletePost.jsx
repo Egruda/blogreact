@@ -14,7 +14,7 @@ function DeletePost() {
     useEffect(()=> {
         const getData = async () => {
             try {
-                const response = await fetch(`https://broken-smoke-228.fly.dev/${id}`);
+                const response = await fetch(`https://still-flower-8414.fly.dev/posts/${id}`);
                 
                 if (!response.ok) {
                     throw new Error(
@@ -38,7 +38,7 @@ function DeletePost() {
         e.preventDefault();
 
         try {
-            const response = await fetch(`https://broken-smoke-228.fly.dev/posts/${id}`, {
+            const response = await fetch(`https://still-flower-8414.fly.dev/posts/${id}`, {
                 method: "DELETE",
                 headers: {
                     'Content-Type': 'application/json',

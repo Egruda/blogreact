@@ -15,7 +15,7 @@ function Login({setToken}) {
         e.preventDefault();
 
         try {
-            const response = await fetch(`https://broken-smoke-228.fly.dev/posts/login`, {
+            const response = await fetch(`https://still-flower-8414.fly.dev/posts/login`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
