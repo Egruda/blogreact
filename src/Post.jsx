@@ -23,7 +23,7 @@ function Post() {
     const inputComment = useRef(null);
 
     useEffect(()=> {
-        fetch(`https://broken-smoke-228.fly.dev/posts/${id}`)
+        fetch(`https://still-flower-8414.fly.dev/posts/${id}`)
             .then(data => data.json())
             .then(data => {
                 setPost(data); 
@@ -34,7 +34,7 @@ function Post() {
                 setPost(null);
             })
             .finally(()=> setLoadingPost(false));
-        fetch(`https://broken-smoke-228.fly.dev/posts/${id}/comments`)
+        fetch(`https://still-flower-8414.fly.dev/posts/${id}/comments`)
             .then(data => data.json())
             .then(data => {
                 setComments(data); 
@@ -67,7 +67,7 @@ function Post() {
         e.preventDefault();
 
         try {
-            const response = await fetch(`https://broken-smoke-228.fly.dev/posts/${id}/comments`, {
+            const response = await fetch(`https://still-flower-8414.fly.dev/posts/${id}/comments`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
